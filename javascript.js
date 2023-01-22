@@ -8,7 +8,9 @@ function fillIn(e) {
 }
 
 function emptyGrid() {
-
+   while (drawing.firstChild) {
+        drawing.removeChild(drawing.firstChild)
+   }
 }
 
 function makeGrid() {
@@ -28,4 +30,18 @@ function makeGrid() {
     }
 }
 
-window.addEventListener("load", makeGrid)
+function rebuildGrid() {
+    newSize = 0;
+    while ((newSize < 1) || (newSize > 100)){
+        newSize = prompt("Enter grid size(1-100): ")
+    }
+    gridLength = newSize;
+    emptyGrid();
+    makeGrid();
+
+}
+
+window.addEventListener("load", makeGrid);
+
+const button = document.querySelector('button');
+button.addEventListener("click", rebuildGrid);
