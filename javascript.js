@@ -30,10 +30,16 @@ function makeGrid() {
     }
 }
 
+function eraseDrawing() {
+    tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile => tile.classList.remove('full'))
+    tiles.forEach(tile => tile.classList.add('empty'))
+}
+
 function rebuildGrid() {
     newSize = 0;
     while ((newSize < 1) || (newSize > 100)){
-        newSize = prompt("Enter grid size(1-100): ")
+        newSize = prompt("Enter Grid Size (1-100): ")
     }
     gridLength = newSize;
     emptyGrid();
@@ -43,5 +49,8 @@ function rebuildGrid() {
 
 window.addEventListener("load", makeGrid);
 
-const button = document.querySelector('button');
-button.addEventListener("click", rebuildGrid);
+const changeGrid = document.querySelector('.input');
+changeGrid.addEventListener("click", rebuildGrid);
+
+const eraseGrid = document.querySelector('.erase');
+eraseGrid.addEventListener("click", eraseDrawing);

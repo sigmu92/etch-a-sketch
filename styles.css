@@ -3,6 +3,10 @@
    --background-color: white; 
 }
 
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .container {
     height: 100vh;
     display:flex;
@@ -13,8 +17,16 @@
 }
 
 button {
-    margin-top: 50px;
+
     padding: 15px 30px;
+    border-style: none;
+    background-color: #00539C;
+    color: white;
+    border-radius: 30px;
+}
+
+.input {
+    margin-top: 50px;
 }
 
 .empty {
@@ -42,4 +54,5 @@ button {
     outline-width: 2px;
     outline-color: black;
 }
+
 
