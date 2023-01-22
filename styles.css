@@ -1,0 +1,38 @@
+:root {
+   --fill-color: black;
+   --background-color: white; 
+}
+
+.container {
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty {
+    background-color: var(--background-color);
+}
+
+.full {
+    background-color: var(--fill-color);
+}
+
+.row {
+    display:flex;
+  
+}
+
+.tile{
+    height: 100%;
+}
+
+.drawing{
+    display: grid;
+    height: 50vh;
+    width: 50vh;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: black;
+}
+
