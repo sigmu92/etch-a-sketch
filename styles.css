@@ -46,10 +46,16 @@ button {
     height: 100%;
 }
 
+.middle {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
 .drawing{
     display: grid;
-    height: 50vh;
-    width: 50vh;
+    height: 60vh;
+    width: 60vh;
     outline-style: solid;
     outline-width: 2px;
     outline-color: black;

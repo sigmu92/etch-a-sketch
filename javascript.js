@@ -1,6 +1,7 @@
 
 let gridLength = 16;
-const drawing = document.querySelector('.drawing')
+const drawing = document.querySelector('.drawing');
+const r = document.querySelector(':root');
 
 function fillIn(e) {
     e.target.classList.remove('empty')
@@ -47,6 +48,10 @@ function rebuildGrid() {
 
 }
 
+function changeColor(e) {
+    r.style.setProperty('--fill-color', e.target.value)
+}
+
 window.addEventListener("load", makeGrid);
 
 const changeGrid = document.querySelector('.input');
@@ -54,3 +59,6 @@ changeGrid.addEventListener("click", rebuildGrid);
 
 const eraseGrid = document.querySelector('.erase');
 eraseGrid.addEventListener("click", eraseDrawing);
+
+const colorForm = document.querySelector('#colors');
+colorForm.addEventListener('input', changeColor);
