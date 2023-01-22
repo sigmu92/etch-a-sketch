@@ -49,7 +49,8 @@ function rebuildGrid() {
 }
 
 function changeColor(e) {
-    r.style.setProperty('--fill-color', e.target.value)
+    r.style.setProperty('--fill-color', e.target.value);
+    drawing.style.setProperty('outline-color', e.target.value);
 }
 
 window.addEventListener("load", makeGrid);
